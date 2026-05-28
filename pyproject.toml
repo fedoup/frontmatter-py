@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fedoup-frontmatter"
+version = "0.1.0"
+description = "Tiny YAML-frontmatter parser/serializer/patcher for markdown documents. Mirrored API with the TypeScript sibling @fedoup/frontmatter so a vault of .md files round-trips byte-for-byte across languages."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "fedoup" }]
+requires-python = ">=3.10"
+keywords = ["frontmatter", "markdown", "yaml", "obsidian", "vault"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = ["PyYAML>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/fedoup/frontmatter-py"
+Issues = "https://github.com/fedoup/frontmatter-py/issues"
+Source = "https://github.com/fedoup/frontmatter-py"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fedoup_frontmatter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
