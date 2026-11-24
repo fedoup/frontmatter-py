@@ -2,6 +2,14 @@ version = 1
 revision = 3
 requires-python = ">=3.10"
 
+[options]
+exclude-newer = "2026-11-16T23:25:29.4650791Z"
+exclude-newer-span = "P7D"
+
+[options.exclude-newer-package]
+fedoup-frontmatter = false
+fedoup-fastapi-file-actions = false
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
